@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mariadb://localhost:3306/edu_link
     username: root
-    password: 2004
+#    password: 2004
 #    driver-class-name: org.postgresql.Driver
 
   jpa:
