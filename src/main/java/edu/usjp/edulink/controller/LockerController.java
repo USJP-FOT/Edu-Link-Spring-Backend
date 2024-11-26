@@ -5,11 +5,21 @@ import edu.usjp.edulink.service.LockerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/locker")
 @RequiredArgsConstructor
 public class LockerController {
     private final LockerService lockerService;
+
+    @GetMapping("/all")
+    public List<Locker> getAll() {
+        //
+        //To Do
+        //
+        return null;
+    }
 
     @PostMapping("/add")
     public void addLocker(@RequestBody Locker locker) {
