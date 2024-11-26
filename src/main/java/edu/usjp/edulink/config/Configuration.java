@@ -3,8 +3,7 @@ package edu.usjp.edulink.config;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
-
-@Controller
+@org.springframework.context.annotation.Configuration
 public class Configuration {
     @Bean
     public ModelMapper modelMapper() {

@@ -3,10 +3,12 @@ package edu.usjp.edulink.controller;
 import edu.usjp.edulink.dto.Student;
 import edu.usjp.edulink.service.StudentService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @CrossOrigin
 @RequestMapping("/student")
@@ -16,7 +18,7 @@ public class StudentController {
 
     @PostMapping("/add")
     public void addStudent(@RequestBody Student student) {
-        System.out.println(student);
+        log.info("add student {}", student);
         studentService.addStudent(student);
     }
     @GetMapping("/all")

@@ -25,5 +25,18 @@ public class LockerController {
         //
     }
 
+    @PatchMapping("/set-status")
+    public void updateLocker(@RequestBody Locker locker) {
+        //
+        //To do
+        //Have to check name is null of not
+    }
+
+    @GetMapping("/get-status")
+    public Boolean getLockerStatus(@RequestParam(value = "id") Integer id) {
+        return null;
+    }
+
+
 }
 

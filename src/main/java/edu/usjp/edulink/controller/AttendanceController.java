@@ -14,13 +14,17 @@ import java.util.List;
 public class AttendanceController {
     private final AttendanceService attendanceService;
 
+
+
     @PostMapping("/mark")
     public void markAttendant(@RequestBody Attendance attendance) {
         attendanceService.markAttendant(attendance);
+
+
     }
+
     @GetMapping("/all")
     public List<Attendance> getAllAttendance() {
         return attendanceService.getAll();
     }
-
 }
