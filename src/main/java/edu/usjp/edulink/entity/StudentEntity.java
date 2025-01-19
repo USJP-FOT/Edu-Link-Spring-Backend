@@ -13,4 +13,5 @@ public class StudentEntity {
     String name;
     String phoneNumber;
     String academicYear;
+    private String email;
 }

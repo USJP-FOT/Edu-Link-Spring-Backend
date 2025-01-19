@@ -1,14 +1,24 @@
 spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: indumawijesingha@gmail.com
+    password: iwojvxhetolifoli
+
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+#    debug: true
   datasource:
     url: jdbc:mariadb://localhost:3306/edu_link
     username: root
-#    password: 2004
-#    driver-class-name: org.postgresql.Driver
-
+    password: 2004
   jpa:
     hibernate:
       ddl-auto: update
-#    show-sql: true
-#    properties:
-#      hibernate:
-#        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
