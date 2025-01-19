@@ -21,7 +21,7 @@ public class EmailServiceImpl implements EmailService {
             message.setText(body);
             javaMailSender.send(message);
 
-            log.info("Email send successfully{}", to);
+            log.info("Email send successfully {}", to);
         }
 
 /*        public void sendAnnouncementEmail(String to, String subject, String body) {
