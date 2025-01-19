@@ -47,4 +47,9 @@ public class AttendanceServiceImpl implements AttendanceService {
         });
         return attendanceList;
     }
+
+    @Override
+    public void delete(Integer id) {
+        attendanceRepository.deleteById(id);
+    }
 }

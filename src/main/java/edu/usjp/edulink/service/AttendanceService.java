@@ -8,4 +8,6 @@ public interface AttendanceService {
     void markAttendant(Attendance attendance);
 
     List<Attendance> getAll();
+
+    void delete(Integer id);
 }
