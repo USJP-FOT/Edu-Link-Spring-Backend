@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- <build>
+     <build>
          <plugins>
              <plugin>
                  <groupId>org.apache.maven.plugins</groupId>
@@ -13,7 +13,7 @@
                  <configuration>
                      <archive>
                          <manifest>
-                             <mainClass>edu.usjp.edulink.Stater</mainClass> &lt;!&ndash; Replace with your main class &ndash;&gt;
+                             <mainClass>edu.usjp.edulink.Stater</mainClass> <!-- Replace with your main class -->
                          </manifest>
                      </archive>
                  </configuration>
@@ -23,11 +23,11 @@
                  <artifactId>spring-boot-maven-plugin</artifactId>
              </plugin>
          </plugins>
-     </build>-->
+     </build>
 
     <groupId>edu.usjp.edulink</groupId>
     <artifactId>Edu-Link</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>3.0-SNAPSHOT</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
