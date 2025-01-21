@@ -2,8 +2,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: indumawijesingha@gmail.com
-    password: iwojvxhetolifoli
+    username: edulinknotification@gmail.com
+    password: xvbsmmyfnfowdjsu
 
     protocol: smtp
     properties:

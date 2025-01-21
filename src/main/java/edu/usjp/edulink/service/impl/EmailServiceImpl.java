@@ -15,7 +15,7 @@ public class EmailServiceImpl implements EmailService {
 
         public void sendEmail(String to, String subject, String body) {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom("indumawijesingha@gmail.com");  // sender's email address
+            message.setFrom("edulinknotification@gmail.com");  // sender's email address
             message.setTo(to);
             message.setSubject(subject);
             message.setText(body);
