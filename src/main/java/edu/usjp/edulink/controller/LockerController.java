@@ -39,7 +39,7 @@ public class LockerController {
     public Boolean getLockerStatus(@RequestParam(value = "id") Integer id) {
         return lockerService.getLocker(id);
     }
-
+//
 // not test
 }
 
