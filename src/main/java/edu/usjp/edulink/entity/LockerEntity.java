@@ -13,7 +13,7 @@ public class LockerEntity {
     @Id
     private Integer id;
     private String name;
-    private Boolean status;
+//    private Boolean status;
     private Boolean isLocked;
 
 

@@ -13,7 +13,7 @@ import lombok.ToString;
 public class Locker {
     private Integer id;
     private String name;
-    private Boolean status;
+//    private Boolean status;
     private Boolean isLocked;
 
     private Integer classRoomId; // FK from locker
