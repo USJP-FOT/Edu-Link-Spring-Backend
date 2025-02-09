@@ -15,17 +15,12 @@ public class LockerController {
 
     @GetMapping("/all")
     public List<Locker> getAll() {
-        //
-        //To Do
-        //
-        return null;
+        return lockerService.getAll();
     }
 
     @PostMapping("/add")
     public void addLocker(@RequestBody Locker locker) {
-        //
-        //To Do
-        //
+        lockerService.addLocker(locker);
     }
 
     @DeleteMapping("/delete")
@@ -36,15 +31,13 @@ public class LockerController {
     }
 
     @PatchMapping("/set-status")
-    public void updateLocker(@RequestBody Locker locker) {
-        //
-        //To do
-        //Have to check name is null of not
+    public void updateLocker(@RequestParam(value = "id") Integer id, @RequestParam(value = "set") Boolean set) {
+        lockerService.setLocker(id,set);
     }
 
     @GetMapping("/get-status")
     public Boolean getLockerStatus(@RequestParam(value = "id") Integer id) {
-        return null;
+        return lockerService.getLocker(id);
     }
 
 
