@@ -25,6 +25,7 @@ public class AttendanceController {
 
     @PostMapping("/mark")
     public void markAttendant(@RequestBody Attendance attendance) {
+        log.info("Mark Attendance {} ",attendance.toString());
         attendanceService.markAttendant(attendance);
 
 
@@ -32,6 +33,7 @@ public class AttendanceController {
 
     @GetMapping("/all")
     public List<Attendance> getAllAttendance() {
+        log.info("Send all attendance");
         return attendanceService.getAll();
     }
 }

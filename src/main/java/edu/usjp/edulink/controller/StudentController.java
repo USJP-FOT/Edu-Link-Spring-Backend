@@ -23,10 +23,12 @@ public class StudentController {
     }
     @GetMapping("/all")
     public List<Student> getAllStudents() {
+        log.info("send all students");
         return studentService.getAllStudent();
     }
     @DeleteMapping("/delete")
     public void deleteStudent(@RequestParam(value = "id") Integer id) {
+        log.info("delete student {}", id);
         studentService.deleteById(id);
     }
 }
