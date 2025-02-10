@@ -12,4 +12,8 @@ public interface LockerService {
     void setLocker(Integer id, Boolean set);
 
     Boolean getLocker(Integer id);
+
+    void setPen(Integer id, Boolean set);
+
+    Boolean getPenStatus(Integer id);
 }

@@ -6,6 +6,8 @@ import edu.usjp.edulink.repository.LockerRepository;
 import edu.usjp.edulink.service.LockerService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class LockerServiceImpl implements LockerService {
+    private static final Logger log = LoggerFactory.getLogger(LockerServiceImpl.class);
     private final LockerRepository lockerRepository;
     private final ModelMapper modelMapper;
 
@@ -25,7 +28,6 @@ public class LockerServiceImpl implements LockerService {
         lockerRepository.findAll().forEach(lockerEntity -> {
             lockers.add(modelMapper.map(lockerEntity, Locker.class));
         });
-
         return lockers;
     }
 
@@ -40,17 +42,24 @@ public class LockerServiceImpl implements LockerService {
             locker.setIsLocked(set);
             lockerRepository.save(locker);
         });
-
-        /*if (lockerRepository.existsById(id)) {
-            LockerEntity locker = lockerRepository.findById(id).get();
-            locker.setIsLocked(!locker.getIsLocked());
-            lockerRepository.save(locker);
-        }*/
-
     }
 
     @Override
     public Boolean getLocker(Integer id) {
         return modelMapper.map(lockerRepository.findById(id), Locker.class).getIsLocked();
     }
+
+    @Override
+    public void setPen(Integer id, Boolean set) {
+        lockerRepository.findById(id).ifPresent(locker -> {
+            locker.setIsPenReady(set);
+            lockerRepository.save(locker);
+        });
+    }
+
+    @Override
+    public Boolean getPenStatus(Integer id) {
+        return modelMapper.map(lockerRepository.findById(id), Locker.class).getIsPenReady();
+    }
+
 }

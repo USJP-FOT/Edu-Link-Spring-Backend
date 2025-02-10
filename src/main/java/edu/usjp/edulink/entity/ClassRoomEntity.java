@@ -22,6 +22,7 @@ public class ClassRoomEntity {
     @GeneratedValue
     @Column(nullable = false)
     private Integer id;
+    private Boolean penStatus;
 
     @Column(nullable = false)
     private Boolean isReady;
