@@ -1,3 +1,4 @@
+/*
 package edu.usjp.edulink.socket;
 
 import lombok.extern.slf4j.Slf4j;
@@ -18,3 +19,4 @@ public class MessageSender {
     }
 
 }
+*/

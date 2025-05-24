@@ -1,3 +1,4 @@
+/*
 package edu.usjp.edulink.socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -63,3 +64,4 @@ public class AttendanceWebSocket extends WebSocketServer {
         }
     }
 }
+*/
