@@ -6,7 +6,8 @@ import edu.usjp.edulink.entity.AttendanceEntity;
 import edu.usjp.edulink.repository.AttendanceRepository;
 import edu.usjp.edulink.repository.StudentRepository;
 import edu.usjp.edulink.service.AttendanceService;
-import edu.usjp.edulink.socket.MessageSender;
+import edu.usjp.edulink.socket.AttendanceSocket;
+//import edu.usjp.edulink.socket.MessageSender;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -21,15 +22,24 @@ public class AttendanceServiceImpl implements AttendanceService {
     private final AttendanceRepository attendanceRepository;
     private final StudentRepository studentRepository;
     private final ModelMapper modelMapper;
-    private final MessageSender sender;
+//    private final MessageSender sender;
+    private final AttendanceSocket attendanceSocket;
 
 
     @Override
     public void markAttendant(Attendance attendance) {
-        if (studentRepository.existsById(attendance.getStudentId())) {
-            attendanceRepository.save(modelMapper.map(attendance, AttendanceEntity.class));
+        if (!attendanceRepository.existsByStudentId(attendance.getStudentId())) {
+            if (studentRepository.existsById(attendance.getStudentId())) {
 
-            sender.sendMessage(modelMapper.map(studentRepository.findStudentEntityById(attendance.getStudentId()), Student.class));
+                attendanceRepository.save(modelMapper.map(attendance, AttendanceEntity.class));
+
+
+//                Student student = modelMapper.map(studentRepository.findStudentEntityById(attendance.getStudentId()), Student.class);
+//                sender.sendMessage(student);
+
+                attendance.setStudentName(studentRepository.findStudentEntityById(attendance.getStudentId()).getName());
+                attendanceSocket.brodeCast(attendance);
+            }
         }
     }
 

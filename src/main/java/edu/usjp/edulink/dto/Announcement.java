@@ -6,6 +6,7 @@ import lombok.ToString;
 @Data
 @ToString
 public class Announcement {
+    
     private int id;
     private String title;
     private String description;
