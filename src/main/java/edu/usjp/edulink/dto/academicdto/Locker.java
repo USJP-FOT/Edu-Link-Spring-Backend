@@ -1,8 +1,7 @@
-package edu.usjp.edulink.dto;
+package edu.usjp.edulink.dto.academicdto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 

@@ -1,5 +1,6 @@
 package edu.usjp.edulink.entity;
 
+import edu.usjp.edulink.service.filtersystem.Mode;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
@@ -22,8 +23,9 @@ public class ClassRoomEntity {
     @GeneratedValue
     @Column(nullable = false)
     private Integer id;
-    private Boolean penStatus;
+
 
     @Column(nullable = false)
     private Boolean isReady;
+    private Mode currentMode;
 }

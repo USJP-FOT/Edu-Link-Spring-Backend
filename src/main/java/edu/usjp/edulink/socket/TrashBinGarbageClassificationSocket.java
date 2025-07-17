@@ -1,7 +1,7 @@
 package edu.usjp.edulink.socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import edu.usjp.edulink.dto.academicdto.Attendance;
+import edu.usjp.edulink.dto.trashdto.TrashBinGarbageType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -16,13 +16,15 @@ import java.util.Set;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class AttendanceSocket extends TextWebSocketHandler {
+public class TrashBinGarbageClassificationSocket extends TextWebSocketHandler {
+
 
     private final ObjectMapper objectMapper;
     private final Set<WebSocketSession> sessions = Collections.synchronizedSet(new HashSet<>());
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+
         sessions.add(session);
     }
 
@@ -38,12 +40,12 @@ public class AttendanceSocket extends TextWebSocketHandler {
 
     }
 
-    public void brodeCast(Attendance attendance) {
+    public void tellGarbageType(TrashBinGarbageType type) {
         synchronized (sessions) {
             for (WebSocketSession session : sessions) {
                 if (session.isOpen()) {
                     try {
-                        String jsonString = objectMapper.writeValueAsString(attendance);
+                        String jsonString = objectMapper.writeValueAsString(type);
                         session.sendMessage(new TextMessage(jsonString));
                     } catch (Exception e) {
                         log.error(e.getMessage());

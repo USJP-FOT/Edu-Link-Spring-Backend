@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service.impl;
 
-import edu.usjp.edulink.dto.Announcement;
+import edu.usjp.edulink.dto.announcementdto.Announcement;
 import edu.usjp.edulink.entity.AnnouncementEntity;
 import edu.usjp.edulink.repository.AnnouncementRepository;
 import edu.usjp.edulink.service.AnnouncementService;

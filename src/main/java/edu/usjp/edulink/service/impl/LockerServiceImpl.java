@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service.impl;
 
-import edu.usjp.edulink.dto.Locker;
+import edu.usjp.edulink.dto.academicdto.Locker;
 import edu.usjp.edulink.entity.LockerEntity;
 import edu.usjp.edulink.repository.LockerRepository;
 import edu.usjp.edulink.service.LockerService;

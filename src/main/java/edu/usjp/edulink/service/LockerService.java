@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service;
 
-import edu.usjp.edulink.dto.Locker;
+import edu.usjp.edulink.dto.academicdto.Locker;
 
 import java.util.List;
 

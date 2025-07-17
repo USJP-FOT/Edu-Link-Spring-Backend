@@ -1,7 +1,6 @@
 package edu.usjp.edulink.service.impl;
 
-import edu.usjp.edulink.dto.Attendance;
-import edu.usjp.edulink.dto.Student;
+import edu.usjp.edulink.dto.academicdto.Attendance;
 import edu.usjp.edulink.entity.AttendanceEntity;
 import edu.usjp.edulink.repository.AttendanceRepository;
 import edu.usjp.edulink.repository.StudentRepository;

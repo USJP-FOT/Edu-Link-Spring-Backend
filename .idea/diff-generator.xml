@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DiffGenerationConfig">
+    <option name="sourceDbValue" value="38b77816-51de-447d-95c2-bf85c06d3267" />
+    <option name="sourceDiffType" value="DB" />
+    <option name="sourceModelValue" value="Edu-Link:entityManagerFactory" />
+    <option name="targetDbValue" value="38b77816-51de-447d-95c2-bf85c06d3267" />
+  </component>
+</project>

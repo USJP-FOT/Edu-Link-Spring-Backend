@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service;
 
-import edu.usjp.edulink.dto.Attendance;
+import edu.usjp.edulink.dto.academicdto.Attendance;
 
 import java.util.List;
 

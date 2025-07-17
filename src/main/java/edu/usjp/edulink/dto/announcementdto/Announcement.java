@@ -1,4 +1,4 @@
-package edu.usjp.edulink.dto;
+package edu.usjp.edulink.dto.announcementdto;
 
 import lombok.Data;
 import lombok.ToString;

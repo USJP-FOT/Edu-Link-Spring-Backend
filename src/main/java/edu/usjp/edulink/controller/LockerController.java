@@ -1,6 +1,6 @@
 package edu.usjp.edulink.controller;
 
-import edu.usjp.edulink.dto.Locker;
+import edu.usjp.edulink.dto.academicdto.Locker;
 import edu.usjp.edulink.service.LockerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +10,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
+@CrossOrigin
 @RequestMapping("/locker")
 @RequiredArgsConstructor
 public class LockerController {

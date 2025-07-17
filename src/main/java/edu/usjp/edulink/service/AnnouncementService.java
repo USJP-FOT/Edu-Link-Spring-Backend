@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service;
 
-import edu.usjp.edulink.dto.Announcement;
+import edu.usjp.edulink.dto.announcementdto.Announcement;
 
 import java.util.List;
 

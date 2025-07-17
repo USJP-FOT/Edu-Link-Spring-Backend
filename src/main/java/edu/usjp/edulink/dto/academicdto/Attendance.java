@@ -1,4 +1,4 @@
-package edu.usjp.edulink.dto;
+package edu.usjp.edulink.dto.academicdto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

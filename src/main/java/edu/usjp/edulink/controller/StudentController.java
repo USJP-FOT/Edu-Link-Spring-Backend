@@ -1,6 +1,6 @@
 package edu.usjp.edulink.controller;
 
-import edu.usjp.edulink.dto.Student;
+import edu.usjp.edulink.dto.academicdto.Student;
 import edu.usjp.edulink.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

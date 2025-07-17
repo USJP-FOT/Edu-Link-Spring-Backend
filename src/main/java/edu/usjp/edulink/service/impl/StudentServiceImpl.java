@@ -1,6 +1,6 @@
 package edu.usjp.edulink.service.impl;
 
-import edu.usjp.edulink.dto.Student;
+import edu.usjp.edulink.dto.academicdto.Student;
 import edu.usjp.edulink.entity.StudentEntity;
 import edu.usjp.edulink.repository.StudentRepository;
 import edu.usjp.edulink.service.StudentService;
