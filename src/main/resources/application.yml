@@ -22,3 +22,7 @@ spring:
     hibernate:
       ddl-auto: update
 #    show-sql: true
+
+jwt:
+  secret: supersecretkeysupersecretkeysupersecret
+  expiration: 3600000
