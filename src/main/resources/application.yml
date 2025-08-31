@@ -15,7 +15,7 @@ spring:
             required: true
   #    debug: true
   datasource:
-    url: jdbc:postgresql://edulinkpostgressql.postgres.database.azure.com:5432/edu_link
+    url: jdbc:postgresql://localhost:5432/edu_link
     username: edulink
     password: root@2002
     driver-class-name: org.postgresql.Driver

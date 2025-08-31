@@ -1,11 +1,14 @@
 package edu.usjp.edulink.controller;
 
+import edu.usjp.edulink.dto.PredictRequest;
 import edu.usjp.edulink.dto.trashdto.TrashBin;
 import edu.usjp.edulink.entity.TrashBinEntity;
 import edu.usjp.edulink.service.TrashBinService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,8 +23,8 @@ public class TrashBinController {
         return trashBinService.addTrashBin(trashBin);
     }
     @GetMapping("/all")
-    public ResponseEntity<?> getAllTrashBin() {
-        return null;
+    public List<TrashBin> getAllTrashBin() {
+        return trashBinService.getAll();
     }
 
     @PutMapping("/set-Capacity")
@@ -42,5 +45,12 @@ public class TrashBinController {
         if (responseStatus) {
             return ResponseEntity.ok("garbage type updated success");
         }else return ResponseEntity.badRequest().body("garbage type update failed invalid id");
+    }
+    @PutMapping("/type")
+    public ResponseEntity<?> tellType(@RequestBody PredictRequest predictRequest) {
+       String responseStatus = trashBinService.tellType(predictRequest);
+        if (responseStatus != null) {
+            return ResponseEntity.ok("type updated : " + responseStatus);
+        } else return ResponseEntity.badRequest().body("type update failed invalid id");
     }
 }

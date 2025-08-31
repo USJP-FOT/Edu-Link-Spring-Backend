@@ -21,6 +21,11 @@ public class StudentController {
         log.info("add student {}", student);
         studentService.addStudent(student);
     }
+    @GetMapping("/find/{id}")
+    public Student getStudent(@PathVariable Integer id) {
+        log.info("get student {}", id);
+        return studentService.findById(id);
+    }
     @GetMapping("/all")
     public List<Student> getAllStudents() {
         log.info("send all students");

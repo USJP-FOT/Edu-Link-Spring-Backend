@@ -10,4 +10,6 @@ public interface StudentService {
     List<Student> getAllStudent();
 
     void deleteById(Integer id);
+
+    Student findById(Integer id);
 }

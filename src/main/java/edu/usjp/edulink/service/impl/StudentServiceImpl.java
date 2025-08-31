@@ -4,6 +4,7 @@ import edu.usjp.edulink.dto.academicdto.Student;
 import edu.usjp.edulink.entity.StudentEntity;
 import edu.usjp.edulink.repository.StudentRepository;
 import edu.usjp.edulink.service.StudentService;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -35,4 +36,12 @@ public class StudentServiceImpl implements StudentService {
     public void deleteById(Integer id) {
         studentRepository.deleteById(id);
     }
+
+    @Override
+    public Student findById(Integer id) {
+        return studentRepository.findById(id)
+                .map(entity -> modelMapper.map(entity, Student.class))
+                .orElseThrow(EntityNotFoundException::new);
+    }
+
 }
