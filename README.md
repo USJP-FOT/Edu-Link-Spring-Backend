@@ -38,7 +38,7 @@ Responsible for database interactions using Spring Data JPA.
 - **Entities**: Represent database tables.
   - `AnnouncementEntity`, `AttendanceEntity`, `LockerEntity`, `StudentEntity`
 
-## API Endpoints
+## Main Key API Endpoints
 
 ### **Announcements**
 | Method | Endpoint         | Description          |
